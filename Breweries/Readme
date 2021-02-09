@@ -1,4 +1,5 @@
-From the international breweries data recorded for a duration of three years, i was directed to do the following analyses to aid better decision making in order to maximize profit and reduce loss to the lowest minimal. 
+I performed this analysis using SQL, Microsoft Excel (Pivot tables), Microsoft PowerBI(power query and visualization), and python(Numpy,Pandas, Seaborn and Matplotlib libraries)
+From the international breweries data recorded for a duration of three years, i was directed to do the following analyses to aid better decision making in order to maximize profit and reduce loss to the lowest minimal.
 
 Performed Profit Analysis on the dataset answering the following questions: 
 1. Within the space of the last three years, what was the profit worth of the breweries, inclusive of the anglophone and the francophone territories? 
@@ -22,3 +23,4 @@ Also performed some specific analysis related to the brands
 7. Bear consumption in Nigeria
 8. Level of consumption of Budweiser in the regions in Nigeria
 9. Level of consumption of Budweiser in the regions in Nigeria in 2019
+
