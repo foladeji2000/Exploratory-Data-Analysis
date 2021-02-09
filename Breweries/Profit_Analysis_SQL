@@ -28,8 +28,5 @@ SELECT BRANDS, SUM(PROFIT) AS TOTAL_PROFIT FROM international_breweries_main WHE
 SELECT MONTHS,SUM(PROFIT) AS TOT,((SUM(PROFIT)/30020250)*100) AS PERCENTAGE PROFIT FROM international_breweries_main 
 WHERE YEARS=2019 GROUP BY MONTHS 
 
-SELECT MONTHS,SUM(PROFIT) AS TOT,((SUM(PROFIT)/30020250)*100) AS PERCENTAGE_PROFIT FROM international_breweries_main 
-WHERE YEARS=2019 GROUP BY MONTHS 
-
 -- Which particular brand generated the highest profit in Senegal
 SELECT BRANDS, SUM(PROFIT) AS TOTAL_PROFIT FROM international_breweries_main WHERE COUNTRIES='Senegal' GROUP BY brands 
