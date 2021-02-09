@@ -1,0 +1,35 @@
+USE international_Breweries
+-- Within the space of the last three years, what was the profit worth of the breweries, inclusive of the anglophone and the francophone territories?
+
+select * from international_breweries_main
+select SUM(PROFIT) as total_profit from international_breweries_main
+
+-- Compare the total profit between these two territories in order for the territory manager, 
+-- Mr. Stone make strategic decision that will aid profit maximization in 2020.
+
+select SUM(PROFIT) as total_profit from international_breweries_main where COUNTRIES IN ('Ghana', 'Nigeria')
+select SUM(PROFIT) as total_profit from international_breweries_main where COUNTRIES IN ('Benin','Senegal','Togo')
+
+-- Country that generated the highest profit in 2019
+SELECT * FROM international_breweries_main
+
+SELECT COUNTRIES, SUM(PROFIT) AS TOTAL_PROFIT FROM international_breweries_main WHERE YEARS=2019 GROUP BY COUNTRIES ORDER BY TOTAL_PROFIT
+
+-- Help him find the year with the highest profit.
+SELECT YEARS, SUM(PROFIT) AS TOTAL_PROFIT FROM international_breweries_main GROUP BY YEARS ORDER BY TOTAL_PROFIT DESC
+
+-- Which month in the three years were the least profit generated?
+SELECT MONTHS,SUM(PROFIT) AS TOTAL_PROFIT FROM international_breweries_main GROUP BY MONTHS ORDER BY TOTAL_PROFIT DESC
+
+-- What was the minimum profit in the month of December 2018?
+SELECT BRANDS, SUM(PROFIT) AS TOTAL_PROFIT FROM international_breweries_main WHERE YEARS=2019 AND MONTHS='December' GROUP BY brands 
+
+-- Compare the profit in percentage for each of the month in 2019
+SELECT MONTHS,SUM(PROFIT) AS TOT,((SUM(PROFIT)/30020250)*100) AS PERCENTAGE PROFIT FROM international_breweries_main 
+WHERE YEARS=2019 GROUP BY MONTHS 
+
+SELECT MONTHS,SUM(PROFIT) AS TOT,((SUM(PROFIT)/30020250)*100) AS PERCENTAGE_PROFIT FROM international_breweries_main 
+WHERE YEARS=2019 GROUP BY MONTHS 
+
+-- Which particular brand generated the highest profit in Senegal
+SELECT BRANDS, SUM(PROFIT) AS TOTAL_PROFIT FROM international_breweries_main WHERE COUNTRIES='Senegal' GROUP BY brands 
